@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+:root {
+  --bg-color: #f7fdfc;
+  --form-color: #ffffff;
+  --btn-color: #2ec4b6;
+  --text-color: #737373;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  padding: 4rem 4rem;
+  font-family: Sofia Sans, "sans-serif";
+}
+
+.content {
+  padding: 0 2rem;
+}
+.img-container {
+  width: 78px;
+}
+img {
+  width: 100%;
+  object-fit: contain;
+}
+.heading {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000b0a;
+}
+.text {
+  color: var(--text-color);
+  margin-top: 1rem;
+  font-weight: 400;
+}
+.mobile-view {
+  display: none;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-container {
+  background-color: var(--form-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 4rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+label {
+  font-weight: bold;
+}
+.form-grid-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-grid-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+input {
+  padding: 10px;
+  font-weight: 300;
+}
+select {
+  padding: 11px;
+}
+
+.btn {
+  background-color: var(--btn-color);
+  padding: 1rem;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  cursor: pointer;
+}
+a {
+  color: var(--btn-color);
+}
+.terms-of-use {
+  margin-top: 10px;
+}
+@media (max-width: 1024px) {
+  body {
+    grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+    padding: 2rem;
+  }
+  .desktop-view {
+    display: none;
+  }
+  .mobile-view {
+    display: block;
+  }
+  .content {
+    margin-bottom: 10px;
+  }
+  .form-container {
+    padding: 2rem;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
